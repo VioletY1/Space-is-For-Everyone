@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Explore how six school subjects help us reach space." />
+  <title>Mission: Space Is For Everyone</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="stars" aria-hidden="true"></div>
+  <header class="site-header">
+    <nav class="main-nav" aria-label="Main navigation">
+      <a href="#mission">Mission</a>
+      <a href="#subjects">Subjects</a>
+      <a class="nav-cta" href="#launch">Start exploring <span>↗</span></a>
+    </nav>
+    <div class="progress-chip" id="progressChip" aria-live="polite">0 of 6 subjects completed</div>
+  </header>
+
+  <main id="top">
+    <section class="hero section-pad" id="mission">
+      <div class="hero-copy">
+        <h1>School subjects<br><em>help us understand</em><br>space.</h1>
+        <p class="hero-lede">Math, science, reading, writing, art, engineering, and teamwork all help people explore beyond Earth. Choose a subject to see how it becomes part of a space mission.</p>
+        <div class="hero-actions"><a class="button button-primary" href="#subjects">Choose a subject <span>↓</span></a></div>
+      </div>
+      <div class="hero-art" aria-label="Illustration of a rocket flying through space">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="planet planet-pink"></div><div class="planet planet-blue"></div>
+        <div class="moon"></div>
+        <div class="rocket-wrap"><div class="rocket-flame"></div><div class="rocket"><span class="rocket-window"></span><span class="rocket-fin left"></span><span class="rocket-fin right"></span></div></div>
+      </div>
+    </section>
+
+    <section class="intro-strip section-pad">
+      <div><h2>Space exploration depends on many kinds of knowledge.</h2></div><p>People with different skills work together to design spacecraft, study new environments, communicate discoveries, and learn from earlier missions. The subjects you study at school can help you take part.</p>
+    </section>
+
+    <section class="subjects-section section-pad" id="subjects">
+      <div class="section-heading"><div><h2>Six subjects can help you<br><em>understand a space mission.</em></h2></div></div>
+      <div class="subject-grid" id="subjectGrid"></div>
+    </section>
+
+    <section class="launch-section section-pad" id="launch">
+      <div class="launch-card"><div><h2>Space exploration needs people<br><em>who continue learning and asking questions.</em></h2><p>Your interests may change as you grow, and each new question can lead you toward a different part of a future mission.</p></div><a class="button button-light" href="#subjects">Return to the subjects <span>↗</span></a></div>
+    </section>
+  </main>
+
+
+  <div class="modal-backdrop" id="lessonModal" aria-hidden="true">
+    <article class="lesson-modal" role="dialog" aria-modal="true" aria-labelledby="lessonTitle">
+      <button class="close-modal" id="closeModal" aria-label="Back to subjects">← Back to subjects</button>
+      <div class="lesson-visual" id="lessonVisual"></div>
+      <div class="lesson-body"><h2 id="lessonTitle"></h2><p id="lessonIntro"></p><div class="lesson-columns"><div><h3>How this subject supports space exploration</h3><ul id="missionBullets"></ul></div><div><h3>How you may already use it</h3><ul id="dailyBullets"></ul></div></div><div class="activity-box"><div><p class="eyebrow">Try an activity</p><h3 id="activityTitle"></h3><div id="activityPrompt"></div></div><div id="activityMount"></div><div id="completionPanel" class="completion-panel" hidden></div></div></div>
+    </article>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
